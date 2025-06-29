@@ -1,23 +1,22 @@
- function App(){
+import './App.css'
+import AddTask from "./components/AddTask"
+import AppName from "./components/AppName"
+import TodoItem1 from "./components/TodoItem1"
+import TodoItem2 from './components/TodoItem2'
+
+
+function App() {
   return (
-   <center className = "todo-container">
-     <h1>TODO App</h1>
-       <div className="container text-center">
-          <div className="row">
-            <div className="col-6">
-              <input type="text" placeholder="Enter Todo Task" />
-            </div>
-            <div className="col-4">
-              <input type="date" />
-            </div>
-            <div className="col-2">
-              <button type="button" class="btn btn-success">Add</button>
-            </div>
-          </div>
-        </div>
-    </center>  
+    <center className="todo-container">
+      <AppName />
+      <AddTask />
+      <div className="items-container">
+        <TodoItem1 />
+        <TodoItem2 />
+      </div>
+    </center>
   )
-  
+
 }
 
 export default App
